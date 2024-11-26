@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін</title>
+    <!-- Підключення CSS Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Увійти до системи</h2>
+        <form method="POST" action="login/"> <!-- Зміни на свій шлях для обробки логіну -->
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nickname">Нікнейм</label>
+                <input type="text" class="form-control" id="nickname" name="nickname" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Увійти</button>
+            <a href="/" class="btn btn-secondary">Повернутися на головну</a> <!-- Кнопка для повернення на головну -->
+        </form>
+    </div>
+
+    <!-- Підключення JavaScript Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
